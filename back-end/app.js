@@ -78,5 +78,13 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+app.get('/aboutus', async (req, res) => {
+  return res.json({
+    title: "About Us!",
+    description: "Hi, I'm CLaire. I'm a third year student at NYU, majoring in computer science and minoring in psychology. I'm originally from Maryland, but I currently live in east village NYC. However, I rarely go home to Maryland; instead, I typically visit my sister and nephew in Minnesota during my breaks. In my free time I enjoy exploring flea markets, making jewelry, and trying new resturants.",
+    image: "./me.jpg"
+  })
+})
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
